@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,34 +50,34 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-iv-hyg">
-                                <rect key="frame" x="426.5" y="725.5" width="46" height="21"/>
+                                <rect key="frame" x="427" y="725.5" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-ok-L29">
-                                <rect key="frame" x="480.5" y="712" width="63" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-ok-L29">
+                                <rect key="frame" x="481" y="712" width="62" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SeC-9D-5xu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15X-Ke-ZqL">
-                                <rect key="frame" x="551.5" y="721" width="51" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15X-Ke-ZqL">
+                                <rect key="frame" x="551" y="721" width="51" height="30"/>
                                 <state key="normal" title="AF:OFF"/>
                                 <connections>
                                     <action selector="toggleAfButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l31-Bv-swX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.750" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYB-jw-Lfc">
-                                <rect key="frame" x="791.5" y="712" width="44" height="21"/>
+                                <rect key="frame" x="791" y="712" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.75" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jU4-cZ-yFc">
-                                <rect key="frame" x="616.5" y="721" width="393.5" height="31"/>
+                                <rect key="frame" x="616" y="721" width="394" height="31"/>
                                 <connections>
                                     <action selector="afSliderEndEditing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltG-Nl-MGa"/>
                                     <action selector="afSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q5C-VC-lkP"/>
@@ -114,6 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bsL-mI-zc0" firstAttribute="centerY" secondItem="Vn3-Cf-VJj" secondAttribute="centerY" id="3d0-Da-0Dg"/>
@@ -156,7 +157,6 @@
                             <constraint firstItem="BZf-pz-57o" firstAttribute="leading" secondItem="Psm-G6-Nfr" secondAttribute="leading" constant="-16" id="zAS-9u-VJx"/>
                             <constraint firstItem="lYB-jw-Lfc" firstAttribute="centerX" secondItem="jU4-cZ-yFc" secondAttribute="centerX" id="zz2-eN-RO3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="accgyroSwitch" destination="Psm-G6-Nfr" id="KvC-jC-Zpk"/>
