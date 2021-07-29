@@ -39,22 +39,29 @@ In last versions of macOS, you should use finder to access the device and get Fi
 ## Dataset Output Format ##
 
 * Accel.txt: `time(s(from 1970)), ax(g-units), ay(g-units), az(g-units)`
-* Gyro.txt: time(s), gx(rad/s), gy(rad/s), gz(rad/s)
-* GPS.txt: time(s), latitude(deg), longitude(deg), horizontalAccuracy(m), altitude(m), verticalAccuracy(m), floorLevel, course(dgr), speed(m/s)
-* Head.txt: time(s), trueHeading(dgr), magneticHeading(dgr), headingAccuracy(dgr)
-* Motion.txt: time(s), attitude.quaternion.w, attitude.quaternion.x, attitude.quaternion.y, attitude.quaternion.z
-* MotARH.txt: time(s),rotationRate.x(rad/s),rotationRate.y(rad/s),rotationRate.z(rad/s),gravity.x(g-units),gravity.y(g-units),gravity.z(g-units),userAccel.x(g-units),userAccel.y(g-units),userAccel.z(g-units),motionHeading(dgr)
-* MotMagnFull.txt: time(s),calibratedMagnField.x(microteslas),calibratedMagnField.y(microteslas),calibratedMagnField.z(microteslas),magnFieldAccuracy
-* Magnet.txt: time(s),magneticField.x(microteslas),magneticField.y(microteslas),magneticField.z(microteslas)
-* ARposes.txt: time(s),ARKit.translation.x(m),ARKit.translation.y(m),ARKit.translation.z(m),ARKit.quaternion.w,ARKit.quaternion.x,ARKit.quaternion.y,ARKit.quaternion.z
-* Frames.txt: time(s),frameNumber,_focalLenghtX,focalLenghtY,principalPointX,principalPointY_
-* Frames.m4v: frames compressed in video 
+* ARposes.txt: `time(s), ARKit.translation.x(m), ARKit.translation.y(m), ARKit.translation.z(m), ARKit.quaternion.w, ARKit.quaternion.x, ARKit.quaternion.y, ARKit.quaternion.z`
+* Frames.m4v: frames compressed in video
+* Frames.txt: `time(s), frameNumber, focalLengthX, focalLengthY, principalPointX, principalPointY`
+* GPS.txt: `time(s), latitude(deg), longitude(deg), horizontalAccuracy(m), altitude(m), verticalAccuracy(m), floorLevel, course(dgr), speed(m/s)`
+* Gyro.txt: `time(s), gx(rad/s), gy(rad/s), gz(rad/s)`  
+* Head.txt: `time(s), trueHeading(dgr), magneticHeading(dgr), headingAccuracy(dgr)`
+* Magnet.txt: `time(s), magneticField.x(microteslas), magneticField.y(microteslas), magneticField.z(microteslas)`
+* MotARH.txt: `time(s), rotationRate.x(rad/s), rotationRate.y(rad/s), rotationRate.z(rad/s), gravity.x(g-units), gravity.y(g-units), gravity.z(g-units), userAccel.x(g-units), userAccel.y(g-units), userAccel.z(g-units), motionHeading(dgr)`
+* Motion.txt: `time(s), attitude.quaternion.w, attitude.quaternion.x, attitude.quaternion.y, attitude.quaternion.z`
+* MotMagnFull.txt: `time(s), calibratedMagnField.x(microteslas), calibratedMagnField.y(microteslas), calibratedMagnField.z(microteslas), magnFieldAccuracy`
 
 
 ## Tested Environments and Devices ##
 
 * Environments: Xcode Version 12.5.1 (12E507)
 * Devices: iPhone XS (iOS 14.4.2), iPad Pro 4th Generation (iPadOS 14.6), etc....
+
+
+## Offline MATLAB Visualization ##
+
+I have included an example script that you can use to parse and visualize the data that comes from iOS Logger. 
+Look under the Visualization directory to check it out.
+You can run the script by typing the following in your terminal:
 
 
 ## Other ##
