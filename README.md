@@ -32,7 +32,7 @@ Each dataset will be saved in separate folder on the device.
 ## Get Saved Datasets ##
 
 After you have collected datasets, connect your device to PC and run iTunes.
-In iTunes go to device -> File Sharing -> ios-logger, in right table check folders with datasets you needed and save it on your PC. 
+In iTunes go to device -> File Sharing -> ios-logger, in right table check folders with datasets you needed and save it on your PC.
 In last versions of macOS, you should use finder to access the device and get File Sharing.
 
 
@@ -59,7 +59,7 @@ In last versions of macOS, you should use finder to access the device and get Fi
 
 ## Offline MATLAB Visualization ##
 
-I have included an example script that you can use to parse and visualize the data that comes from iOS Logger. 
+I have included an example script that you can use to parse and visualize the data that comes from iOS Logger.
 Look under the Visualization directory to check it out.
 You can run the script by typing the following in your terminal:
 
@@ -71,7 +71,7 @@ python path_to_folder_with_sync-data/sync-data.py path_to_datasets_folder/datase
 ```
 
 _To get frames from video you can use ffmpeg or some video editor._
-For example: 
+For example:
 ```
 ffmpeg -i Frames.m4v Frames/Frame%05d.png -hide_banner
 ```
