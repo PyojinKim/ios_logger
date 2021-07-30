@@ -4,23 +4,38 @@ clear variables; %clear classes;
 rand('state',0); % rand('state',sum(100*clock));
 dbstop if error;
 
+addpath(genpath(pwd));
+
 
 %% common setting to read text files
 
 delimiter = ',';
 datasetPath = '../ios_logger_datasets/2021-07-29T12-52-25';
+
+
+data_path = datasetPath;
+
+
+
+
+
+
+
+%%
+
+
 textFileName = 'ARposes.txt';
 textFileDir = [datasetPath '/' textFileName];
 
 
 videoFileName = 'Frames.m4v';
-videoFileDir = [datasetPath '/' videoFileName];
+video_path = [datasetPath '/' videoFileName];
 
 
 %% extract image frames from mp4 video files
 
 outputFolder1 = ('temp_rgb_dataset_snowflake_square_building4');
-v1 = VideoReader(videoFileDir);
+v1 = VideoReader(video_path);
 vid1Frames = read(v1);
 for frame = 1:size(vid1Frames,4)
     outputBaseFileName = sprintf('%08d.png',frame);
