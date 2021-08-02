@@ -21,15 +21,11 @@ extract_frames(video_path, image_path, size);
 
 % load intrinsics and extrinsics (ARKit poses)
 disp('Load intrinsics and extrinsics');
+sync_intrinsics_and_poses([data_path '/Frames.txt'], [data_path '/ARposes.txt'], [data_path '/SyncedPoses.txt']);
 
 
+%%
 
-
-%% sync_intrinsics_and_poses
-
-cam_file = [data_path '/Frames.txt'];
-pose_file = [data_path '/ARposes.txt'];
-out_file = [data_path '/SyncedPoses.txt'];
 
 
 

@@ -2,11 +2,12 @@
 ios_logger_datasets/2021-07-29T12-52-25/images
 ios_logger_datasets/2021-07-29T12-52-25/intrinsics
 ios_logger_datasets/2021-07-29T12-52-25/poses
+ios_logger_datasets/2021-07-29T12-52-25/SyncedPoses.txt
 
 
 # Matlab variables
 
 
-# backup files
-
+# Backup files
+*.asv
 
