@@ -62,3 +62,9 @@ In last versions of macOS, you should use finder to access the device and get Fi
 I have included an example script that you can use to parse and visualize the data that comes from iOS Logger.
 Look under the Visualization directory to check it out.
 You can run the script by typing the following in your terminal:
+
+    run main_script.m
+
+Here's one of the figures produced by the MATLAB script:
+
+![Data Visualization](https://github.com/PyojinKim/ios_logger/blob/master/data_visualization.png)
