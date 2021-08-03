@@ -40,10 +40,10 @@ cols = 960;
 
 % define the camera body and frame
 camBody = zeros(3,4);
-camBody(:,1) = camScale * [(cols/2);-(rows/2);-(rows-50)] / 1000;
-camBody(:,2) = camScale * [-(cols/2);-(rows/2);-(rows-50)] / 1000;
-camBody(:,3) = camScale * [-(cols/2);(rows/2);-(rows-50)] / 1000;
-camBody(:,4) = camScale * [(cols/2);(rows/2);-(rows-50)] / 1000;
+camBody(:,1) = camScale * [(cols/2);-(rows/2);(rows-50)] / 1000;
+camBody(:,2) = camScale * [-(cols/2);-(rows/2);(rows-50)] / 1000;
+camBody(:,3) = camScale * [-(cols/2);(rows/2);(rows-50)] / 1000;
+camBody(:,4) = camScale * [(cols/2);(rows/2);(rows-50)] / 1000;
 
 camFrame = camScale * ((rows/2) / 1000) * eye(3);
 

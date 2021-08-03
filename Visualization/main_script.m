@@ -19,32 +19,12 @@ data_path = datasetPath;
 
 
 
-
-
-
-
 %%
 
 
 textFileName = 'ARposes.txt';
 textFileDir = [datasetPath '/' textFileName];
 
-
-videoFileName = 'Frames.m4v';
-video_path = [datasetPath '/' videoFileName];
-
-
-%% extract image frames from mp4 video files
-
-outputFolder1 = ('temp_rgb_dataset_snowflake_square_building4');
-v1 = VideoReader(video_path);
-vid1Frames = read(v1);
-for frame = 1:size(vid1Frames,4)
-    outputBaseFileName = sprintf('%08d.png',frame);
-    outputFullFileName = fullfile(outputFolder1,outputBaseFileName);
-    imwrite(vid1Frames(:,:,:,frame),outputFullFileName,'png');
-    frame
-end
 
 
 %%
@@ -129,9 +109,7 @@ for k = 1:M
     plot_inertial_frame(0.5);
     
     
-    set(gca, 'YDir','reverse');
-    set(gca, 'ZDir','reverse');
-    view(-2, -59);
+    view(-8, 30);
     
     Rgc_ARKit_current = T_gc_true{k}(1:3,1:3);
     pgc_ARKit_current = T_gc_true{k}(1:3,4);

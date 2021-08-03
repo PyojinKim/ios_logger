@@ -1,9 +1,6 @@
 function process_data(data_path)
 
 % initial value
-window_size = 9;
-min_angle = 15;
-min_distance = 0.1;
 original_image_size = [1440, 1920];
 target_image_size = [480, 640];
 
@@ -29,27 +26,16 @@ if (~exist(intrinsics_path, 'dir'))
     mkdir(intrinsics_path);
 end
 cam_intrinsic_dict = load_camera_intrinsic([data_path '/Frames.txt'], original_image_size, target_image_size);
-for k = progress(1:length(cam_intrinsic_dict))
-    out_file = [intrinsics_path sprintf('/%05d.txt', k)];
-    fileID = fopen(out_file,'w');
-    fprintf(fileID, '%.6f %.6f %.6f\n', cam_intrinsic_dict(1,:,k));
-    fprintf(fileID, '%.6f %.6f %.6f\n', cam_intrinsic_dict(2,:,k));
-    fprintf(fileID, '%.6f %.6f %.6f\n', cam_intrinsic_dict(3,:,k));
-    fclose(fileID);
-end
+save_camera_intrinsic(intrinsics_path, cam_intrinsic_dict);
 
-
-%%
 
 % save camera poses
+poses_path = [data_path '/poses'];
+if (~exist(poses_path, 'dir'))
+    mkdir(poses_path);
+end
 cam_pose_dict = load_camera_pose([data_path '/SyncedPoses.txt']);
-
-
-
-
-
-
-
+save_camera_pose(poses_path, cam_pose_dict)
 
 
 end
