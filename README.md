@@ -62,21 +62,3 @@ In last versions of macOS, you should use finder to access the device and get Fi
 I have included an example script that you can use to parse and visualize the data that comes from iOS Logger.
 Look under the Visualization directory to check it out.
 You can run the script by typing the following in your terminal:
-
-
-## Other ##
-_To syncronize accelerometer and gyroscope data_ you can use python script sync-data.py:
-```
-python path_to_folder_with_sync-data/sync-data.py path_to_datasets_folder/dataset_folder
-```
-
-_To get frames from video you can use ffmpeg or some video editor._
-For example:
-```
-ffmpeg -i Frames.m4v Frames/Frame%05d.png -hide_banner
-```
-or you can try to use VideoToPictures.cpp:
-```
-compile VideoToPictures.cpp and
-VideoToPictures path_to_datasets_folder/dataset_folder/Frames.m4v
-```

@@ -1,7 +1,6 @@
 function process_data(data_path)
 
 % initial value
-data_source = 'ARKit';
 window_size = 9;
 min_angle = 15;
 min_distance = 0.1;
@@ -30,7 +29,7 @@ if (~exist(intrinsics_path, 'dir'))
     mkdir(intrinsics_path);
 end
 cam_intrinsic_dict = load_camera_intrinsic([data_path '/Frames.txt'], original_image_size, target_image_size);
-for k = progress(1:lenght(cam_intrinsic_dict))
+for k = progress(1:length(cam_intrinsic_dict))
     out_file = [intrinsics_path sprintf('/%05d.txt', k)];
     fileID = fopen(out_file,'w');
     fprintf(fileID, '%.6f %.6f %.6f\n', cam_intrinsic_dict(1,:,k));
@@ -40,10 +39,10 @@ for k = progress(1:lenght(cam_intrinsic_dict))
 end
 
 
+%%
 
-
-
-
+% save camera poses
+cam_pose_dict = load_camera_pose([data_path '/SyncedPoses.txt']);
 
 
 
