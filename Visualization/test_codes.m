@@ -1,5 +1,36 @@
 
 
+
+
+R_gc_ARKit(:,:,1)
+R_gc_ARKit(:,:,end)
+
+
+acos((trace(R_gc_ARKit(:,:,1).' * R_gc_ARKit(:,:,end))-1)/2) * (180/pi)
+
+
+%%
+
+1628423717.787880,0,1463.026245,1463.026245,964.833557,696.239563
+
+cam_intrinsics = importdata([data_path '/Frames.txt'], ',');
+
+
+K = cameraParams.IntrinsicMatrix.';
+
+K_modified = K * 3
+
+% save synced camera poses as text
+out_file = [data_path '/Frames_manual.txt'];
+fileID = fopen(out_file,'w');
+for k = 1:length(cam_intrinsics)
+    fprintf(fileID,'%.6f,%d,%.6f,%.6f,%.6f,%.6f\n', cam_intrinsics(k,1),cam_intrinsics(k,2),K_modified(1,1),K_modified(2,2),K_modified(1,3),K_modified(2,3));
+end
+fclose(fileID);
+
+
+%%
+
 delimiter = ',';
 textFileName = 'ARposes.txt';
 textFileDir = [datasetPath '/' textFileName];
